@@ -7,9 +7,6 @@ public class Officer {
     private String workingDistrict;
     private int crimesSolved;
 
-    public static void main(String[] args) {
-
-    }
 
     public Officer() {
     }
@@ -29,6 +26,16 @@ public class Officer {
         this.officerID = officerID;
     }
     public String toString() {
-        return getOfficerID() +"@"+Integer.toHexString(hashCode());
+        return name + " " + surname + " " + officerID + " " + workingDistrict + " " + crimesSolved;
+    }
+    public int calculateLevel() {
+        if (crimesSolved <= 20 && crimesSolved > 0){
+            return 1;
+        }
+        else if (crimesSolved >20 && crimesSolved <= 40){
+            return 2;
+        }
+        else
+            return 3;
     }
 }
