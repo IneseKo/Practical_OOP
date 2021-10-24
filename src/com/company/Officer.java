@@ -1,6 +1,7 @@
 package com.company;
 
 public class Officer {
+
     private String name;
     private String surname;
  private int officerID;
@@ -18,6 +19,14 @@ public class Officer {
         this.workingDistrict = workingDistrict;
         this.crimesSolved = crimesSolved;
     }
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public int getOfficerID() {
         return officerID;
     }
